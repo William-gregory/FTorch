@@ -36,9 +36,9 @@ contains
       integer :: out_layout(out_dims) = [1,2]
 
       ! Binary file containing input tensor
-      character(len=*), parameter :: filename = '../data/image_tensor.dat'
+      character(len=*), parameter :: filename = 'data/image_tensor.dat' ! FIXME
       ! Text file containing categories
-      character(len=*), parameter :: filename_cats = '../data/categories.txt'
+      character(len=*), parameter :: filename_cats = 'data/categories.txt' ! FIXME
 
       ! Length of tensor and number of categories
       integer, parameter :: tensor_length = 150528

@@ -2,11 +2,13 @@
 
 from math import isclose
 import numpy as np
+import os
+import sys
 import torch
 from resnet18 import print_top_results
 
 
-def deploy(saved_model: str, device: str, batch_size: int = 1) -> torch.Tensor:
+def deploy(saved_model: str, device: str, batch_size: int = 1, str: filepath = None) -> torch.Tensor:
     """
     Load TorchScript ResNet-18 and run inference with Tensor from example image.
 
@@ -27,7 +29,10 @@ def deploy(saved_model: str, device: str, batch_size: int = 1) -> torch.Tensor:
     transposed_shape = [224, 224, 3, batch_size]
     precision = np.float32
 
-    np_data = np.fromfile("data/image_tensor.dat", dtype=precision)
+    filename = "data/image_tensor.dat"
+    if filepath:
+        filename = os.path.join(filepath, filename)
+    np_data = np.fromfile(filename), dtype=precision)
     np_data = np_data.reshape(transposed_shape)
     np_data = np_data.transpose()
     input_tensor = torch.from_numpy(np_data)
@@ -79,6 +84,7 @@ if __name__ == "__main__":
 
     batch_size_to_run = 1
 
-    result = deploy(saved_model_file, device_to_run, batch_size_to_run)
+    filepath = os.path.dirname(__file__) if len(argv) == 1 else argv[1]
+    result = deploy(saved_model_file, device_to_run, batch_size_to_run, filepath=filepath)
     print_top_results(result)
     check_results(result)

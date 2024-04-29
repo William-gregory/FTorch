@@ -55,7 +55,7 @@ jobs:
           cd $(pwd)/build/examples
           for EXAMPLE in 1_SimpleNet 2_ResNet18; do
             cd ${EXAMPLE}
-            python3 -m pip install -r requirements.txt
+            python3 -m pip install -r $(pwd)/examples/${EXAMPLE}/requirements.txt
             ctest
-            cd ../..
+            cd ..
           done

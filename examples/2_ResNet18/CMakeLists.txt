@@ -34,7 +34,7 @@ if(CMAKE_BUILD_TESTS)
     WORKING_DIRECTORY ${PROJECT_BINARY_DIR})
   add_test(NAME resnet_infer_fortran
     COMMAND ${PROJECT_BINARY_DIR}/resnet_infer_fortran
-    ${PROJECT_BINARY_DIR}/saved_resnet18_model_cpu.pt
+    ${PROJECT_BINARY_DIR}/saved_resnet18_model_cpu.pt ${PROJECT_SOURCE_DIR}/data
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
   set_tests_properties(resnet_infer_fortran PROPERTIES PASS_REGULAR_EXPRESSION "0.884623")
 endif()

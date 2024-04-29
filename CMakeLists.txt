@@ -46,3 +46,8 @@ find_package(Torch REQUIRED)
 
 # Library with C and Fortran bindings
 add_subdirectory(src)
+
+# Build integration tests
+if(CMAKE_BUILD_TESTS)
+  add_subdirectory(examples)
+endif()

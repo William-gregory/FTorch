@@ -1,0 +1,1 @@
+/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort -O3 CMakeFiles/FortranCInterface.dir/main.F.o CMakeFiles/FortranCInterface.dir/call_sub.f.o CMakeFiles/FortranCInterface.dir/call_mod.f90.o -o FortranCInterface   -L/usr/lib64/gcc/x86_64-suse-linux/13  libsymbols.a libmyfort.a -lirng 

@@ -1,0 +1,1 @@
+/opt/intel/oneapi/compiler/2023.2.0/linux/bin/icpx -O3 -DNDEBUG CMakeFiles/VerifyFortranC.dir/main.c.o CMakeFiles/VerifyFortranC.dir/VerifyC.c.o CMakeFiles/VerifyFortranC.dir/VerifyCXX.cxx.o -o VerifyFortranC   -L/usr/lib64/gcc/x86_64-suse-linux/7  libVerifyFortran.a -lifport -lifcoremt -lipgo -lpthread 

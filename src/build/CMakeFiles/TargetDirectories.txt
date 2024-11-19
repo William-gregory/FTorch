@@ -1,0 +1,7 @@
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/install/local.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/install.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/list_install_components.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/rebuild_cache.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/edit_cache.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/ftorch.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/install/strip.dir

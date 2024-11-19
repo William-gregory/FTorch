@@ -1,0 +1,4 @@
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/VerifyCXX/CMakeFiles/rebuild_cache.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/VerifyCXX/CMakeFiles/edit_cache.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/VerifyCXX/CMakeFiles/VerifyFortranC.dir
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/VerifyCXX/CMakeFiles/VerifyFortran.dir

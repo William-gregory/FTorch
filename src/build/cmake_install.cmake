@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0")
+  set(CMAKE_INSTALL_PREFIX "/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -47,15 +47,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libftorch.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libftorch.so"
-         RPATH "$ORIGIN/../lib64:/lib/intel64:/lib/intel64_win:/lib/win-x64:/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib")
+         RPATH "$ORIGIN/../lib64:/opt/intel/oneapi/mkl/2023.2.0/lib:/opt/intel/oneapi/mkl/2023.2.0/lib/intel64_win:/opt/intel/oneapi/mkl/2023.2.0/lib/win-x64:/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib")
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/libftorch.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libftorch.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libftorch.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libftorch.so"
-         OLD_RPATH "/lib/intel64:/lib/intel64_win:/lib/win-x64:/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib:::::::::::::::::"
-         NEW_RPATH "$ORIGIN/../lib64:/lib/intel64:/lib/intel64_win:/lib/win-x64:/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib")
+         OLD_RPATH "/opt/intel/oneapi/mkl/2023.2.0/lib:/opt/intel/oneapi/mkl/2023.2.0/lib/intel64_win:/opt/intel/oneapi/mkl/2023.2.0/lib/win-x64:/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib:::::::::::::::::"
+         NEW_RPATH "$ORIGIN/../lib64:/opt/intel/oneapi/mkl/2023.2.0/lib:/opt/intel/oneapi/mkl/2023.2.0/lib/intel64_win:/opt/intel/oneapi/mkl/2023.2.0/lib/win-x64:/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libftorch.so")
     endif()

@@ -1,8 +1,8 @@
-set(CMAKE_Fortran_COMPILER "/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort")
+set(CMAKE_Fortran_COMPILER "/opt/cray/pe/craype/2.7.30/bin/ftn")
 set(CMAKE_Fortran_COMPILER_ARG1 "")
 set(CMAKE_Fortran_COMPILER_ID "Intel")
 set(CMAKE_Fortran_COMPILER_VERSION "2021.10.0.20230609")
-set(CMAKE_Fortran_COMPILER_WRAPPER "")
+set(CMAKE_Fortran_COMPILER_WRAPPER "CrayPrgEnv")
 set(CMAKE_Fortran_PLATFORM_ID "Linux")
 set(CMAKE_Fortran_SIMULATE_ID "")
 set(CMAKE_Fortran_SIMULATE_VERSION "")
@@ -63,7 +63,7 @@ endif()
 
 
 
-set(CMAKE_Fortran_IMPLICIT_INCLUDE_DIRECTORIES "/opt/intel/oneapi/mkl/2023.2.0/include;/opt/intel/oneapi/compiler/2023.2.0/linux/lib/oclfpga/include;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include/intel64;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include/icc;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include;/usr/local/include;/usr/lib64/gcc/x86_64-suse-linux/7/include;/usr/lib64/gcc/x86_64-suse-linux/7/include-fixed;/usr/include")
-set(CMAKE_Fortran_IMPLICIT_LINK_LIBRARIES "ifport;ifcoremt;imf;svml;m;ipgo;irc;pthread;svml;c;gcc;gcc_s;irc_s;dl;c")
-set(CMAKE_Fortran_IMPLICIT_LINK_DIRECTORIES "/opt/intel/oneapi/mkl/2023.2.0/lib/intel64;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/lib/intel64_lin;/opt/intel/oneapi/compiler/2023.2.0/linux/lib;/usr/lib64/gcc/x86_64-suse-linux/7;/usr/lib64;/lib64;/usr/x86_64-suse-linux/lib;/lib;/usr/lib")
+set(CMAKE_Fortran_IMPLICIT_INCLUDE_DIRECTORIES "/opt/cray/pe/mpich/8.1.28/ofi/intel/2022.1/include;/opt/cray/pe/netcdf/4.9.0.9/intel/2023.2/include;/opt/cray/pe/hdf5/1.12.2.11/intel/2023.2/include;/opt/cray/pe/dsmml/0.2.2/dsmml/include;/opt/cray/pe/pmi/6.1.13/include;/opt/intel/oneapi/mkl/2023.2.0/include;/opt/intel/oneapi/compiler/2023.2.0/linux/lib/oclfpga/include;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include/intel64;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include/icc;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include;/usr/local/include;/usr/lib64/gcc/x86_64-suse-linux/7/include;/usr/lib64/gcc/x86_64-suse-linux/7/include-fixed;/usr/include")
+set(CMAKE_Fortran_IMPLICIT_LINK_LIBRARIES "hdf5_hl;hdf5;hdf5hl_fortran;hdf5_fortran;netcdf;netcdff;mpifort_intel;mpi_intel;dsmml;pmi;pmi2;xpmem;imf;m;pthread;ifport;ifcoremt;imf;svml;m;ipgo;irc;pthread;svml;c;gcc;gcc_s;irc_s;dl;c")
+set(CMAKE_Fortran_IMPLICIT_LINK_DIRECTORIES "/opt/cray/pe/mpich/8.1.28/ofi/intel/2022.1/lib;/opt/cray/pe/netcdf/4.9.0.9/intel/2023.2/lib;/opt/cray/pe/hdf5/1.12.2.11/intel/2023.2/lib;/opt/cray/pe/dsmml/0.2.2/dsmml/lib;/opt/cray/pe/pmi/6.1.13/lib;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/lib/intel64_lin;/opt/intel/oneapi/compiler/2023.2.0/linux/lib;/usr/lib64/gcc/x86_64-suse-linux/7;/usr/lib64;/lib64;/usr/x86_64-suse-linux/lib;/lib;/usr/lib")
 set(CMAKE_Fortran_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

@@ -72,54 +72,54 @@ include CMakeFiles/myfort.dir/flags.make
 CMakeFiles/myfort.dir/mysub.f.o: CMakeFiles/myfort.dir/flags.make
 CMakeFiles/myfort.dir/mysub.f.o: /usr/share/cmake/Modules/FortranCInterface/mysub.f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building Fortran object CMakeFiles/myfort.dir/mysub.f.o"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/mysub.f -o CMakeFiles/myfort.dir/mysub.f.o
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/mysub.f -o CMakeFiles/myfort.dir/mysub.f.o
 
 CMakeFiles/myfort.dir/mysub.f.i: cmake_force
 	@echo "Preprocessing Fortran source to CMakeFiles/myfort.dir/mysub.f.i"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/mysub.f > CMakeFiles/myfort.dir/mysub.f.i
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/mysub.f > CMakeFiles/myfort.dir/mysub.f.i
 
 CMakeFiles/myfort.dir/mysub.f.s: cmake_force
 	@echo "Compiling Fortran source to assembly CMakeFiles/myfort.dir/mysub.f.s"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/mysub.f -o CMakeFiles/myfort.dir/mysub.f.s
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/mysub.f -o CMakeFiles/myfort.dir/mysub.f.s
 
 CMakeFiles/myfort.dir/my_sub.f.o: CMakeFiles/myfort.dir/flags.make
 CMakeFiles/myfort.dir/my_sub.f.o: /usr/share/cmake/Modules/FortranCInterface/my_sub.f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building Fortran object CMakeFiles/myfort.dir/my_sub.f.o"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/my_sub.f -o CMakeFiles/myfort.dir/my_sub.f.o
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/my_sub.f -o CMakeFiles/myfort.dir/my_sub.f.o
 
 CMakeFiles/myfort.dir/my_sub.f.i: cmake_force
 	@echo "Preprocessing Fortran source to CMakeFiles/myfort.dir/my_sub.f.i"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/my_sub.f > CMakeFiles/myfort.dir/my_sub.f.i
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/my_sub.f > CMakeFiles/myfort.dir/my_sub.f.i
 
 CMakeFiles/myfort.dir/my_sub.f.s: cmake_force
 	@echo "Compiling Fortran source to assembly CMakeFiles/myfort.dir/my_sub.f.s"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/my_sub.f -o CMakeFiles/myfort.dir/my_sub.f.s
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/my_sub.f -o CMakeFiles/myfort.dir/my_sub.f.s
 
 CMakeFiles/myfort.dir/mymodule.f90.o: CMakeFiles/myfort.dir/flags.make
 CMakeFiles/myfort.dir/mymodule.f90.o: /usr/share/cmake/Modules/FortranCInterface/mymodule.f90
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building Fortran object CMakeFiles/myfort.dir/mymodule.f90.o"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/mymodule.f90 -o CMakeFiles/myfort.dir/mymodule.f90.o
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/mymodule.f90 -o CMakeFiles/myfort.dir/mymodule.f90.o
 
 CMakeFiles/myfort.dir/mymodule.f90.i: cmake_force
 	@echo "Preprocessing Fortran source to CMakeFiles/myfort.dir/mymodule.f90.i"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/mymodule.f90 > CMakeFiles/myfort.dir/mymodule.f90.i
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/mymodule.f90 > CMakeFiles/myfort.dir/mymodule.f90.i
 
 CMakeFiles/myfort.dir/mymodule.f90.s: cmake_force
 	@echo "Compiling Fortran source to assembly CMakeFiles/myfort.dir/mymodule.f90.s"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/mymodule.f90 -o CMakeFiles/myfort.dir/mymodule.f90.s
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/mymodule.f90 -o CMakeFiles/myfort.dir/mymodule.f90.s
 
 CMakeFiles/myfort.dir/my_module.f90.o: CMakeFiles/myfort.dir/flags.make
 CMakeFiles/myfort.dir/my_module.f90.o: /usr/share/cmake/Modules/FortranCInterface/my_module.f90
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles/FortranCInterface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building Fortran object CMakeFiles/myfort.dir/my_module.f90.o"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/my_module.f90 -o CMakeFiles/myfort.dir/my_module.f90.o
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /usr/share/cmake/Modules/FortranCInterface/my_module.f90 -o CMakeFiles/myfort.dir/my_module.f90.o
 
 CMakeFiles/myfort.dir/my_module.f90.i: cmake_force
 	@echo "Preprocessing Fortran source to CMakeFiles/myfort.dir/my_module.f90.i"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/my_module.f90 > CMakeFiles/myfort.dir/my_module.f90.i
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /usr/share/cmake/Modules/FortranCInterface/my_module.f90 > CMakeFiles/myfort.dir/my_module.f90.i
 
 CMakeFiles/myfort.dir/my_module.f90.s: cmake_force
 	@echo "Compiling Fortran source to assembly CMakeFiles/myfort.dir/my_module.f90.s"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/my_module.f90 -o CMakeFiles/myfort.dir/my_module.f90.s
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /usr/share/cmake/Modules/FortranCInterface/my_module.f90 -o CMakeFiles/myfort.dir/my_module.f90.s
 
 # Object files for target myfort
 myfort_OBJECTS = \

@@ -1,10 +1,10 @@
-set(CMAKE_CXX_COMPILER "/opt/intel/oneapi/compiler/2023.2.0/linux/bin/icpx")
+set(CMAKE_CXX_COMPILER "/opt/cray/pe/craype/2.7.30/bin/CC")
 set(CMAKE_CXX_COMPILER_ARG1 "")
-set(CMAKE_CXX_COMPILER_ID "IntelLLVM")
-set(CMAKE_CXX_COMPILER_VERSION "2023.2.0")
+set(CMAKE_CXX_COMPILER_ID "Intel")
+set(CMAKE_CXX_COMPILER_VERSION "2021.10.0.20230609")
 set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "")
-set(CMAKE_CXX_COMPILER_WRAPPER "")
-set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "17")
+set(CMAKE_CXX_COMPILER_WRAPPER "CrayPrgEnv")
+set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "14")
 set(CMAKE_CXX_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters;cxx_std_11;cxx_alias_templates;cxx_alignas;cxx_alignof;cxx_attributes;cxx_auto_type;cxx_constexpr;cxx_decltype;cxx_decltype_incomplete_return_types;cxx_default_function_template_args;cxx_defaulted_functions;cxx_defaulted_move_initializers;cxx_delegating_constructors;cxx_deleted_functions;cxx_enum_forward_declarations;cxx_explicit_conversions;cxx_extended_friend_declarations;cxx_extern_templates;cxx_final;cxx_func_identifier;cxx_generalized_initializers;cxx_inheriting_constructors;cxx_inline_namespaces;cxx_lambdas;cxx_local_type_template_args;cxx_long_long_type;cxx_noexcept;cxx_nonstatic_member_init;cxx_nullptr;cxx_override;cxx_range_for;cxx_raw_string_literals;cxx_reference_qualified_functions;cxx_right_angle_brackets;cxx_rvalue_references;cxx_sizeof_member;cxx_static_assert;cxx_strong_enums;cxx_thread_local;cxx_trailing_return_types;cxx_unicode_literals;cxx_uniform_initialization;cxx_unrestricted_unions;cxx_user_literals;cxx_variadic_macros;cxx_variadic_templates;cxx_std_14;cxx_aggregate_default_initializers;cxx_attribute_deprecated;cxx_binary_literals;cxx_contextual_conversions;cxx_decltype_auto;cxx_digit_separators;cxx_generic_lambdas;cxx_lambda_init_captures;cxx_relaxed_constexpr;cxx_return_type_deduction;cxx_variable_templates;cxx_std_17;cxx_std_20")
 set(CMAKE_CXX98_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters")
 set(CMAKE_CXX11_COMPILE_FEATURES "cxx_std_11;cxx_alias_templates;cxx_alignas;cxx_alignof;cxx_attributes;cxx_auto_type;cxx_constexpr;cxx_decltype;cxx_decltype_incomplete_return_types;cxx_default_function_template_args;cxx_defaulted_functions;cxx_defaulted_move_initializers;cxx_delegating_constructors;cxx_deleted_functions;cxx_enum_forward_declarations;cxx_explicit_conversions;cxx_extended_friend_declarations;cxx_extern_templates;cxx_final;cxx_func_identifier;cxx_generalized_initializers;cxx_inheriting_constructors;cxx_inline_namespaces;cxx_lambdas;cxx_local_type_template_args;cxx_long_long_type;cxx_noexcept;cxx_nonstatic_member_init;cxx_nullptr;cxx_override;cxx_range_for;cxx_raw_string_literals;cxx_reference_qualified_functions;cxx_right_angle_brackets;cxx_rvalue_references;cxx_sizeof_member;cxx_static_assert;cxx_strong_enums;cxx_thread_local;cxx_trailing_return_types;cxx_unicode_literals;cxx_uniform_initialization;cxx_unrestricted_unions;cxx_user_literals;cxx_variadic_macros;cxx_variadic_templates")
@@ -15,8 +15,8 @@ set(CMAKE_CXX23_COMPILE_FEATURES "")
 
 set(CMAKE_CXX_PLATFORM_ID "Linux")
 set(CMAKE_CXX_SIMULATE_ID "GNU")
-set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "GNU")
-set(CMAKE_CXX_SIMULATE_VERSION "4.2.1")
+set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "")
+set(CMAKE_CXX_SIMULATE_VERSION "7.5.0")
 
 
 
@@ -85,7 +85,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/opt/intel/oneapi/mkl/2023.2.0/include;/opt/intel/oneapi/compiler/2023.2.0/linux/lib/oclfpga/include;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include;/usr/include/c++/13;/usr/include/c++/13/x86_64-suse-linux;/usr/include/c++/13/backward;/opt/intel/oneapi/compiler/2023.2.0/linux/lib/clang/17/include;/usr/local/include;/usr/x86_64-suse-linux/include;/usr/include")
-set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "svml;irng;stdc++;imf;m;gcc_s;gcc;irc;dl;gcc_s;gcc;c;gcc_s;gcc;irc_s")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/lib/intel64_lin;/opt/intel/oneapi/compiler/2023.2.0/linux/lib;/usr/lib64/gcc/x86_64-suse-linux/13;/usr/lib64;/lib64;/usr/x86_64-suse-linux/lib;/lib;/usr/lib;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/opt/cray/pe/mpich/8.1.28/ofi/intel/2022.1/include;/opt/cray/pe/netcdf/4.9.0.9/intel/2023.2/include;/opt/cray/pe/hdf5/1.12.2.11/intel/2023.2/include;/opt/cray/pe/dsmml/0.2.2/dsmml/include;/opt/cray/pe/pmi/6.1.13/include;/opt/intel/oneapi/mkl/2023.2.0/include;/opt/intel/oneapi/compiler/2023.2.0/linux/lib/oclfpga/include;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include/intel64;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include/icc;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/include;/usr/include/c++/7;/usr/include/c++/7/x86_64-suse-linux;/usr/include/c++/7/backward;/usr/local/include;/usr/lib64/gcc/x86_64-suse-linux/7/include;/usr/lib64/gcc/x86_64-suse-linux/7/include-fixed;/usr/include")
+set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "hdf5_hl;hdf5;hdf5_hl_cpp;hdf5_cpp;netcdf_c++4;netcdf;mpi_intel;dsmml;pmi;pmi2;xpmem;stdc++;imf;m;ifcoremt;ifport;pthread;imf;svml;irng;stdc++;m;ipgo;decimal;cilkrts;stdc++;gcc;gcc_s;irc;svml;c;gcc;gcc_s;irc_s;dl;c")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/opt/cray/pe/mpich/8.1.28/ofi/intel/2022.1/lib;/opt/cray/pe/netcdf/4.9.0.9/intel/2023.2/lib;/opt/cray/pe/hdf5/1.12.2.11/intel/2023.2/lib;/opt/cray/pe/dsmml/0.2.2/dsmml/lib;/opt/cray/pe/pmi/6.1.13/lib;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64;/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/lib/intel64_lin;/opt/intel/oneapi/compiler/2023.2.0/linux/lib;/usr/lib64/gcc/x86_64-suse-linux/7;/usr/lib64;/lib64;/usr/x86_64-suse-linux/lib;/lib;/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

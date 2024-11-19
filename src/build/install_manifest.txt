@@ -1,5 +1,5 @@
-/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0/lib64/libftorch.so
-/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0/include/ctorch.h
-/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0/lib64/cmake/FTorch/FTorchConfig.cmake
-/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0/lib64/cmake/FTorch/FTorchConfig-release.cmake
-/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0/include/ftorch/ftorch.mod
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0/lib64/libftorch.so
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0/include/ctorch.h
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0/lib64/cmake/FTorch/FTorchConfig.cmake
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0/lib64/cmake/FTorch/FTorchConfig-release.cmake
+/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0/include/ftorch/ftorch.mod

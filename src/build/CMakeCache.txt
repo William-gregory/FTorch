@@ -27,8 +27,14 @@ CMAKE_BUILD_TYPE:STRING=Release
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
+//saved value of CRAYPE_LINK_TYPE environment variable
+CMAKE_CRAYPE_LINKTYPE:STRING=
+
+//saved value of LOADEDMODULES environment variable
+CMAKE_CRAYPE_LOADEDMODULES:STRING=craype-x86-rome:libfabric/1.20.1:craype-network-ofi:perftools-base/23.12.0:xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d:cray-pmi/6.1.13:CmrsEnv/default:TimeZoneEDT/default:DefApps/default:craype/2.7.30:cray-dsmml/0.2.2:PrgEnv-intel/8.5.0:intel-classic/2023.2.0:cray-mpich/8.1.28:nccmp/1.9.0.1:nco/5.0.1:fre-nctools/2024.04:gridcf-gct/6.2.20220524:uberftp/2_8:gcp/2.3:hsm/1.3.0:perlbrew/5.38.2:fre/bronx-21:cray-hdf5/1.12.2.11:cray-netcdf/4.9.0.9:libyaml/0.2.5:git/2.35.2
+
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=/opt/intel/oneapi/compiler/2023.2.0/linux/bin/icpx
+CMAKE_CXX_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -46,7 +52,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:STRING=/opt/intel/oneapi/compiler/2023.2.0/linux/bin/icx
+CMAKE_C_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/cc
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -85,7 +91,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
 //Fortran compiler
-CMAKE_Fortran_COMPILER:STRING=/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort
+CMAKE_Fortran_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/ftn
 
 //Flags used by the Fortran compiler during all build types.
 CMAKE_Fortran_FLAGS:STRING=
@@ -139,7 +145,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0
+CMAKE_INSTALL_PREFIX:PATH=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -280,8 +286,29 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //The directory containing a CMake configuration file for Caffe2.
 Caffe2_DIR:PATH=/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/share/cmake/Caffe2
 
+//Enables cluster BLAS library
+ENABLE_BLACS:BOOL=OFF
+
+//Enables BLAS Fortran95 API
+ENABLE_BLAS95:BOOL=OFF
+
+//Enables cluster DFT library
+ENABLE_CDFT:BOOL=OFF
+
+//Enables cluster PARDISO functionality
+ENABLE_CPARDISO:BOOL=OFF
+
 //No help, variable specified on the command line.
 ENABLE_CUDA:UNINITIALIZED=FALSE
+
+//Enables LAPACK Fortran95 API
+ENABLE_LAPACK95:BOOL=OFF
+
+//Enables OpenMP Offload functionality
+ENABLE_OMP_OFFLOAD:BOOL=OFF
+
+//Enables cluster LAPACK library
+ENABLE_SCALAPACK:BOOL=OFF
 
 //Value Computed by CMake
 FTorch_BINARY_DIR:STATIC=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build
@@ -292,8 +319,26 @@ FTorch_SOURCE_DIR:STATIC=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src
 //The directory containing a CMake configuration file for MKLDNN.
 MKLDNN_DIR:PATH=MKLDNN_DIR-NOTFOUND
 
+//Choose MKL_ARCH options are: ia32;intel64
+MKL_ARCH:STRING=intel64
+
 //The directory containing a CMake configuration file for MKL.
-MKL_DIR:PATH=MKL_DIR-NOTFOUND
+MKL_DIR:PATH=/opt/intel/oneapi/mkl/2023.2.0/lib/cmake/mkl
+
+//Path to a file.
+MKL_H:PATH=/opt/intel/oneapi/mkl/2023.2.0/include
+
+//Choose MKL_INTERFACE_FULL options are: intel_ilp64;intel_lp64
+MKL_INTERFACE_FULL:STRING=intel_ilp64
+
+//Choose MKL_LINK options are: static;dynamic;sdl
+MKL_LINK:STRING=dynamic
+
+//Choose MKL_THREADING options are: sequential;intel_thread;tbb_thread
+MKL_THREADING:STRING=intel_thread
+
+//Path to a library.
+OMP_LIBRARY:FILEPATH=/opt/intel/oneapi/compiler/2023.2.0/linux/compiler/lib/intel64_lin/libiomp5.so
 
 //Path to a library.
 TORCH_LIBRARY:FILEPATH=/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib/libtorch.so
@@ -312,6 +357,15 @@ ftorch_LIB_DEPENDS:STATIC=general;torch;general;/ncrc/home2/William.Gregory/mini
 
 //Path to a library.
 kineto_LIBRARY:FILEPATH=kineto_LIBRARY-NOTFOUND
+
+//Path to a library.
+mkl_core_file:FILEPATH=/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_core.so
+
+//Path to a library.
+mkl_intel_ilp64_file:FILEPATH=/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_intel_ilp64.so
+
+//Path to a library.
+mkl_intel_thread_file:FILEPATH=/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_intel_thread.so
 
 
 ########################
@@ -336,6 +390,10 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
+//ADVANCED property for variable: CMAKE_CRAYPE_LINKTYPE
+CMAKE_CRAYPE_LINKTYPE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CRAYPE_LOADEDMODULES
+CMAKE_CRAYPE_LOADEDMODULES-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -506,5 +564,5 @@ FortranCInterface_VERIFIED_CXX:INTERNAL=1
 //ADVANCED property for variable: XIAR
 XIAR-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0
 

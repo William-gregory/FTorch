@@ -30,14 +30,15 @@ rm Makefile
 rm cmake_install.cmake
 rm -r CMakeFiles
 rm -r modules
+rm -r torch_v2p1_Inteloneapi2023p2p0
 
 cmake  .. \
   -DCMAKE_BUILD_TYPE=Release \
-  -DCMAKE_Fortran_COMPILER=ifort \
-  -DCMAKE_C_COMPILER=icx \
-  -DCMAKE_CXX_COMPILER=icpx \
+  -DCMAKE_Fortran_COMPILER=ftn \
+  -DCMAKE_C_COMPILER=cc \
+  -DCMAKE_CXX_COMPILER=CC \
   -DCMAKE_PREFIX_PATH=/ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch \
-  -DCMAKE_INSTALL_PREFIX=/gpfs/f5/gfdl_o/scratch/William.Gregory/Ftorch/src/build/torch_v2p1_Inteloneapi2023p2p0 \
+  -DCMAKE_INSTALL_PREFIX=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/torch_v2p1_Inteloneapi2023p2p0 \
   -DENABLE_CUDA=FALSE
 
 cmake --build .

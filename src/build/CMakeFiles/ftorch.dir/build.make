@@ -73,28 +73,28 @@ CMakeFiles/ftorch.dir/ctorch.cpp.o: CMakeFiles/ftorch.dir/flags.make
 CMakeFiles/ftorch.dir/ctorch.cpp.o: ../ctorch.cpp
 CMakeFiles/ftorch.dir/ctorch.cpp.o: CMakeFiles/ftorch.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ftorch.dir/ctorch.cpp.o"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/icpx $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ftorch.dir/ctorch.cpp.o -MF CMakeFiles/ftorch.dir/ctorch.cpp.o.d -o CMakeFiles/ftorch.dir/ctorch.cpp.o -c /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ctorch.cpp
+	/opt/cray/pe/craype/2.7.30/bin/CC $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ftorch.dir/ctorch.cpp.o -MF CMakeFiles/ftorch.dir/ctorch.cpp.o.d -o CMakeFiles/ftorch.dir/ctorch.cpp.o -c /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ctorch.cpp
 
 CMakeFiles/ftorch.dir/ctorch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ftorch.dir/ctorch.cpp.i"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/icpx $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ctorch.cpp > CMakeFiles/ftorch.dir/ctorch.cpp.i
+	/opt/cray/pe/craype/2.7.30/bin/CC $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ctorch.cpp > CMakeFiles/ftorch.dir/ctorch.cpp.i
 
 CMakeFiles/ftorch.dir/ctorch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ftorch.dir/ctorch.cpp.s"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/icpx $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ctorch.cpp -o CMakeFiles/ftorch.dir/ctorch.cpp.s
+	/opt/cray/pe/craype/2.7.30/bin/CC $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ctorch.cpp -o CMakeFiles/ftorch.dir/ctorch.cpp.s
 
 CMakeFiles/ftorch.dir/ftorch.f90.o: CMakeFiles/ftorch.dir/flags.make
 CMakeFiles/ftorch.dir/ftorch.f90.o: ../ftorch.f90
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building Fortran object CMakeFiles/ftorch.dir/ftorch.f90.o"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ftorch.f90 -o CMakeFiles/ftorch.dir/ftorch.f90.o
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ftorch.f90 -o CMakeFiles/ftorch.dir/ftorch.f90.o
 
 CMakeFiles/ftorch.dir/ftorch.f90.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing Fortran source to CMakeFiles/ftorch.dir/ftorch.f90.i"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ftorch.f90 > CMakeFiles/ftorch.dir/ftorch.f90.i
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ftorch.f90 > CMakeFiles/ftorch.dir/ftorch.f90.i
 
 CMakeFiles/ftorch.dir/ftorch.f90.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling Fortran source to assembly CMakeFiles/ftorch.dir/ftorch.f90.s"
-	/opt/intel/oneapi/compiler/2023.2.0/linux/bin/intel64/ifort $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ftorch.f90 -o CMakeFiles/ftorch.dir/ftorch.f90.s
+	/opt/cray/pe/craype/2.7.30/bin/ftn $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/ftorch.f90 -o CMakeFiles/ftorch.dir/ftorch.f90.s
 
 # Object files for target ftorch
 ftorch_OBJECTS = \
@@ -110,6 +110,7 @@ libftorch.so: CMakeFiles/ftorch.dir/build.make
 libftorch.so: /ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib/libtorch.so
 libftorch.so: /ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib/libc10.so
 libftorch.so: /ncrc/home2/William.Gregory/miniconda3/envs/ML/lib/python3.11/site-packages/torch/lib/libc10.so
+libftorch.so: /opt/intel/oneapi/compiler/2023.2.0/linux/compiler/lib/intel64_lin/libiomp5.so
 libftorch.so: CMakeFiles/ftorch.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libftorch.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ftorch.dir/link.txt --verbose=$(VERBOSE)

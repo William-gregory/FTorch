@@ -22,7 +22,15 @@ export FI_VERBS_PREFER_XRC=0
 
 
 export PATH="/ncrc/home2/fms/local/opt/fre-commands/bronx-21/bin:${PATH}"
-       
+
+rm install_manifest.txt
+rm libftorch.so
+rm CMakeCache.txt
+rm Makefile
+rm cmake_install.cmake
+rm -r CMakeFiles
+rm -r modules
+
 cmake  .. \
   -DCMAKE_BUILD_TYPE=Release \
   -DCMAKE_Fortran_COMPILER=ifort \

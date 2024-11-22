@@ -33,11 +33,11 @@ class CNN(nn.Module):
 
 
 
-inA = ['siconc','SST','UI','VI','HI','TS','mask']
+inA = ['siconc','SST','UI','VI','HI','TS','SSS','mask']
 argsA = {
 'kernel_size':3,
 'zero_padding':0,
-'h_channels':[18,32,64],
+'h_channels':[32,64,128],#[18,32,64],
 'n_channels':int(len(inA)),
 'n_classes':1,
 'stride':1,
@@ -45,17 +45,17 @@ argsA = {
 'seed':711,
 }
 modelA = CNN(argsA)
-pathA = '/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/weights/NetworkA_weights_SICpSSTpVelpHIpTS_18x32x64_SPEAR.pt'
+pathA = '/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/weights/NetworkA_weights_SICpSSTpVelpHIpTSpSSS_SPEAR.pt'
 modelA.load_state_dict(torch.load(pathA,map_location=torch.device('cpu')))
 modelA.eval()
 scriptA = torch.jit.script(modelA)
-scriptA.save('NetworkA_script_SICpSSTpVelpHIpTS_18x32x64_SPEAR.pt')
+scriptA.save('NetworkA_script_SICpSSTpVelpHIpTSpSSS_SPEAR.pt')
 
 
 argsB = {
 'kernel_size':1,
 'zero_padding':0,
-'h_channels':[18,32,64],
+'h_channels':[32,64,128],
 'n_channels':7,    
 'n_classes':5,
 'stride':1,
@@ -63,9 +63,9 @@ argsB = {
 'seed':711,
 }
 modelB = CNN(argsB)
-pathB = '/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/weights/NetworkB_weights_SICpSSTpVelpHIpTS_18x32x64_SPEAR.pt'
+pathB = '/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/weights/NetworkB_weights_SICpSSTpVelpHIpTSpSSS_SPEAR.pt'
 modelB.load_state_dict(torch.load(pathB,map_location=torch.device('cpu')))
 modelB.eval()
 scriptB = torch.jit.script(modelB)
-scriptB.save('NetworkB_script_SICpSSTpVelpHIpTS_18x32x64_SPEAR.pt')
+scriptB.save('NetworkB_script_SICpSSTpVelpHIpTSpSSS_SPEAR.pt')
 

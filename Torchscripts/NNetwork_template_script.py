@@ -63,13 +63,18 @@ class CNN(nn.Module):
         ]))
 
     def forward(self, x):
+        x[torch.isnan(x)] = 0.0
         dSIC = (self.conv_netA(x[:,:8]) + 0.0009238007032701131)/0.03622488757495426 #normalization for dSIC
-        halo = (x.shape[2] - dSIC.shape[2])//2
-        dSIC[x[:,-1:,halo:-halo,halo:-halo]==0] = 0
-        dCN = torch.permute(torch.squeeze(self.conv_netB(torch.hstack((dSIC,x[:,8:,halo:-halo,halo:-halo])))),(1,2,0))
+        halo = (x.shape[2] - dSIC.shape[2])//2 #halo size used for first CNN (default 4)
+        dSIC[x[:,-1:,halo:-halo,halo:-halo]==0] = 0 #set land points to zero
+        dSIC[torch.isnan(dSIC)] = 0.0
+        x = torch.hstack((dSIC,x[:,8:,halo:-halo,halo:-halo])) #combine dSIC prediction with remain state variables for second CNN
+        dCN = torch.permute(torch.squeeze(self.conv_netB(x)),(1,2,0)) #permute is the same as transpose
         ni,nj,ct = dCN.shape
-        dCN = torch.vstack((torch.vstack((torch.zeros((halo,nj,ct)),dCN)),torch.zeros((halo,nj,ct))))
-        return torch.hstack((torch.hstack((torch.zeros((ni+2*halo,halo,ct)),dCN)),torch.zeros((ni+2*halo,halo,ct))))
+        dCN = torch.vstack((torch.vstack((torch.zeros((halo,nj,ct)),dCN)),torch.zeros((halo,nj,ct)))) #re-pad prediction with halos of value zero
+        dCN = torch.hstack((torch.hstack((torch.zeros((ni+2*halo,halo,ct)),dCN)),torch.zeros((ni+2*halo,halo,ct)))) #padding y axis
+        dCN[torch.isnan(dCN)] = 0.0
+        return dCN
         
 
 inA = ['siconc','SST','UI','VI','HI','TS','SSS','mask']
@@ -101,7 +106,6 @@ pathB = '/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/weights/NetworkB_weights
 
 paramA = torch.load(pathA,map_location=torch.device('cpu'))
 paramB = torch.load(pathB,map_location=torch.device('cpu'))
-
 
 model.conv_netA.load_state_dict(strip_prefix_in_state_dict(paramA, "conv_net."))
 model.conv_netB.load_state_dict(strip_prefix_in_state_dict(paramB, "conv_net."))

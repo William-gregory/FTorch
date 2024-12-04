@@ -30,23 +30,6 @@ class CNN(nn.Module):
     def forward(self, x):
         return self.conv_net(x)
 
-class WillCNN(nn.Module):
-    """
-    Fully CNN with 4 convolutional layers
-    The input 'args' should be a dictionary containing
-    details of the network hyperparameters and architecture
-    """
-
-    def __init__(self,args):
-        super(Identity, self).__init__()
-        torch.manual_seed(args['seed'])
-
-    def forward(self, x):
-        return x
-
-
-
-
 inA = ['siconc','SST','UI','VI','HI','TS','SSS','mask']
 argsA = {
 'kernel_size':3,
@@ -76,12 +59,9 @@ argsB = {
 'bias':False,
 'seed':711,
 }
-#modelB = CNN(argsB)
-#pathB = '/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/weights/NetworkB_weights_SICpSSTpVelpHIpTSpSSS_SPEAR.pt'
-#modelB.load_state_dict(torch.load(pathB,map_location=torch.device('cpu')))
-#modelB.eval()
-modelB = Identity(argsB)
-scriptB = torch.jit.script(modelB)
-scriptB.save('NetworkB_script_Identity.pt')
-#scriptB.save('NetworkB_script_SICpSSTpVelpHIpTSpSSS_SPEAR.pt')
+modelB = CNN(argsB)
+pathB = '/gpfs/f5/gfdl_o/scratch/William.Gregory/FTorch/weights/NetworkB_weights_SICpSSTpVelpHIpTSpSSS_SPEAR.pt'
+modelB.load_state_dict(torch.load(pathB,map_location=torch.device('cpu')))
+modelB.eval()
+scriptB.save('NetworkB_script_SICpSSTpVelpHIpTSpSSS_SPEAR.pt')
 
